@@ -10,7 +10,7 @@
         src: ~/PCAPfile.pcap
         dest: ~/HOA8.1/executablePCAPfile.pcap
         flat: yes
-    register: fetch
+      register: fetch
 
-  - debug:
-      var: fetch
+    - debug:
+        var: fetch
