@@ -1,0 +1,16 @@
+---
+
+- name: extract executable
+  hosts: server1
+  gather_facts: false
+
+  tasks:
+    - name: Extract pcap file
+      fetch:
+        src: ~/PCAPfile.pcap
+        dest: ~/HOA8.1/executablePCAPfile.pcap
+        flat: yes
+    register: fetch
+
+  - debug:
+      var: fetch
